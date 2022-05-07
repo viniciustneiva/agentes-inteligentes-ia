@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>2 Intelligent Agents</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../main.js"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+        .floor:hover { cursor: pointer; }
+        .agent-actions { margin-left: auto; margin-right: auto; border-collapse: collapse; }
+        .agent-actions th { padding: 0.5ex; border: 1px solid hsl(240,10%,90%); background: hsl(240,10%,85%); text-align: center; }
+        .agent-actions td { padding: 0.25ex; border: 1px solid hsl(240,20%,80%); text-align: center; }
+
+        .robot { transition: transform 2.0s; }
+        .floor { fill: white; }
+        .floor.clean { fill: hsl(240,10%,90%); transition: fill 2.0s; }
+        .floor.dirty { fill: hsl(0,50%,50%); transition: fill 0.1s; }
+        .floor.wet { fill: rgb(95, 111, 255); transition: fill 0.1s; }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="row">
+      <div  class="col-sm-6 col-md-offset-3" id="content">
+
+        <h2 id="simple-cleaning-robot">Simple cleaning robot</h2>
+
+        <div id="agent-controlled-diagram">
+
+          <p>The robot will choose its own actions based on simple rules. Click on a box to make it dirty.</p>
+
+          <svg width="900" height="750"></svg>
+
+        </div>
+ 
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./cleaningRobot.js"></script>
+    <script type="text/javascript" src="./c_cleaningRobot.js"></script>
+  </body>
+</html>
